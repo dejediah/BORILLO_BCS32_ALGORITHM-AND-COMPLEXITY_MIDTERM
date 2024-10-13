@@ -36,5 +36,6 @@ int main() {
 
     int movestotal = toh_process(packnum, "Port 1 (source)", "Port 3 (destination)", "Port 2 (buffer)");
     cout << "Total moves needed: " << movestotal << endl;
+    cout << "Time complexity: O(2^n)" << endl;
     return 0;
 }
