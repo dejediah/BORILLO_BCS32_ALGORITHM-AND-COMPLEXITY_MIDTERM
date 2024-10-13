@@ -1,20 +1,16 @@
 /* 
 Borillo, Raphael Jedidiah R. | BCS32 | 202230704
-Problem 1:
-To improve your delivery route calculations, you need to compute the total distance between multiple delivery points efficiently. 
-The distance between two points  (𝑥1,𝑦1) (x1​,y1​) and  (𝑥2,𝑦2) (x2​,y2​) is calculated using the formula:
-
-√𝑑=(𝑥2−𝑥1)^2+(𝑦2−𝑦1)^2
-
-Given N delivery points in 2D space, write a program that computes the total distance traveled for a given sequence of points. 
-Additionally, calculate the sum of the first N natural numbers using summation formulas.
+Problem 2:
+The logistics company wants to categorize routes by their efficiency. 
+To do this, you need to analyze the time complexity of sorting algorithms. 
+Implement and compare the runtime of Bubble Sort and Merge Sort for sorting a list of delivery times in ascending order.
 */
 
 #include <iostream>
 #include <vector>
 using namespace std;
 
-vector<int> bubble_sort(vector<int> arr) {
+vector<int> bubble_sort(vector<int>& arr) {
     int n = arr.size();
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n - 1; j++) {
@@ -26,7 +22,7 @@ vector<int> bubble_sort(vector<int> arr) {
     return arr;
 }
 
-vector<int> merge_sort(vector<int> arr) {
+vector<int> merge_sort(vector<int>& arr) {
     if (arr.size() > 1) {
         int mid = arr.size() / 2;
         vector<int> left_half(arr.begin(), arr.begin() + mid);
